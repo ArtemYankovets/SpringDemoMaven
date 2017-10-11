@@ -1,0 +1,9 @@
+items.add(new StackoverflowWebsite("stackoverflow", "http://stackoverflow.com",
+                "http://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico", "Stack Overflow (StackExchange)",
+                "for professionals and enthusiast programmers"));
+items.add(new StackoverflowWebsite("serverfault", "http://serverfault.com",
+                "http://cdn.sstatic.net/Sites/serverfault/img/favicon.ico", "Server Fault (StackExchange)",
+                "for system and network administrators"));
+items.add(new StackoverflowWebsite("superuser", "http://superuser.com",
+                "http://cdn.sstatic.net/Sites/serverfault/img/favicon.ico", "Super User (StackExchange)",
+                "for computer enthusiasts and power user"));
