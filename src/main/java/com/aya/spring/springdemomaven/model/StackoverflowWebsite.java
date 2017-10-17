@@ -1,10 +1,16 @@
 package com.aya.spring.springdemomaven.model;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document
 @Getter
 public class StackoverflowWebsite {
+
+    @Id
     private final String id;
+
     private final String website;
     private final String iconImageUrl;
     private final String title;

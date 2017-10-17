@@ -1,14 +1,18 @@
 package com.aya.spring.springdemomaven.service;
 
 import com.aya.spring.springdemomaven.model.StackoverflowWebsite;
+import com.aya.spring.springdemomaven.persistance.StackoverflowWebsiteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @Service
 public class StackoverflowService {
+
+    @Autowired
+    private StackoverflowWebsiteRepository repository;
 
     private static List<StackoverflowWebsite> items = new ArrayList<>();
     static {
@@ -32,7 +36,12 @@ public class StackoverflowService {
                 "for enthusiasts and power users of the Android operating system"));
     }
 
+//    @PostConstruct
+//    public void init() {
+//        repository.save(items);
+//    }
+
     public List<StackoverflowWebsite> findAll() {
-        return Collections.unmodifiableList(items);
+        return repository.findAll();
     }
 }
